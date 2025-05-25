@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dharani | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">Dharani's portfolio</a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero-section" id="home">
+  <div class="container hero-container">
+    <div class="hero-text">
+      <h1 class="slide-in">Hello, I'm Dharani</h1>
+      <h2 class="typing-text"></h2> <!-- This line adds typing text -->
+  
+      
+      <a href="#projects" class="btn btn-primary slide-in-delay">View Projects</a>
+      <div class="social-icons">
+        <a href="https://github.com/dharani978" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/dharani-madhavi-gurram-4851b9280/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:gdharani0503@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <img
+      src="profile.jpg"
+      alt="Dharani Madhavi"
+      class="hero-img"
+    />
+  </div>
+</section>
+
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="about-text" data-aos="fade-up">
+        I am a passionate web developer with a keen interest in building dynamic and responsive applications. Currently, I am exploring the MERN stack to deepen my full-stack development skills. Alongside, I am steadily gaining exposure to the field of Artificial Intelligence. With a strong foundation in Java, I am continuously learning and committed to applying my knowledge in real-world projects. I thrive on learning new technologies and enjoy turning ideas into impactful solutions.
+
+
+      </p>
+    </div>
+  </section>
+
+ <section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">React</div>
+    <div class="skill-card">Bootstrap</div>
+    <div class="skill-card">Node.js</div>
+    <div class="skill-card">SQL</div>
+    <div class="skill-card">Java</div>
+  </div>
+</section>
+
+
+
+
+  <section class="projects-section" id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3><a href="https://dharani-recipemania.netlify.app" target="_blank">Recipe Mania</a></h3>
+      <p>A recipe search web app using API integration.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://dup-clone.netlify.app/" target="_blank">Amazon Clone</a></h3>
+      <p>A UI clone of Amazon’s homepage with cart functionality.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://madhavitoodo.netlify.app" target="_blank">ToDo List</a></h3>
+      <p>A simple JavaScript-based task manager app.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://dharanisportfolio.netlify.app" target="_blank">My Portfolio</a></h3>
+      <p>This portfolio site showcasing my skills and work.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="contact" class="contact-section">
+    <div class="container contact-container">
+      <h2 class="section-title">Get In Touch</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Dharani. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const texts = [
+      " Frontend Developer",
+      "Java Enthusiast",
+      "Tech Explorer"
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+
+    function type() {
+      if (count === texts.length) count = 0;
+      currentText = texts[count];
+      letter = currentText.slice(0, ++index);
+      document.querySelector(".typing-text").textContent = letter;
+
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+      } else {
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  });
+</script>
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      // Remove active class from all links
+      navLinks.forEach(link => link.classList.remove('active'));
+      // Add active class to the clicked one
+      this.classList.add('active');
+    });
+  });
+</script>
+
+</body>
