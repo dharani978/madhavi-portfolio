@@ -6,13 +6,13 @@ Welcome to my **Personal Portfolio Website**, built using **HTML, CSS, and JavaS
 
  📌 Features
 
-* 🎨 Dark-themed, visually appealing design
-* ⌨️ Typing animation in the hero section
-* 🧠 Technical skills displayed as responsive cards
-* 💼 Projects section with descriptions and links
-* 📞 Contact form section with details
-* 🖼️ Profile image and clean sectioned layout
-* 📱 Fully responsive across all devices
+*  Dark-themed, visually appealing design
+*  Typing animation in the hero section
+*  Technical skills displayed as responsive cards
+*  Projects section with descriptions and links
+*  Contact form section with details
+*  Profile image and clean sectioned layout
+*  Fully responsive across all devices
 
  🛠️ Technologies Used
 
